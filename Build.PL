@@ -32,9 +32,9 @@ my $build = Module::Build->new(
 	'meta_merge'	=> {
 		'resources'	=> {
 			'license'	=> 'http://dev.perl.org/licenses/',
-			'homepage'	=> 'http://search.cpan.org/dist/Test-Pod-No404s',
-			'bugtracker'	=> 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Pod-No404s',
-			'repository'	=> 'http://github.com/apocalypse/perl-test-pod-no404s',
+			'homepage'	=> 'http://search.cpan.org/dist/Pod-Spell-CommonMistakes',
+			'bugtracker'	=> 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Pod-Spell-CommonMistakes',
+			'repository'	=> 'http://github.com/apocalypse/perl-pod-spell-commonmistakes',
 		},
 	},
 );
