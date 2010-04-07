@@ -1,0 +1,16 @@
+Build.PL
+MANIFEST
+MANIFEST.SKIP
+README
+Makefile.PL
+META.yml
+Changes
+LICENSE
+
+lib/Pod/Spell/CommonMistakes.pm
+lib/Pod/Spell/CommonMistakes/WordList.pm
+
+examples/simple.pl
+
+t/1_load.t
+t/apocalypse.t
