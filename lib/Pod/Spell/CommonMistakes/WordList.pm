@@ -1,10 +1,8 @@
 # Declare our package
 package Pod::Spell::CommonMistakes::WordList;
-use strict; use warnings;
 
-# Initialize our version
-use vars qw( $VERSION );
-$VERSION = '0.01';
+# For Dist::Zilla
+# ABSTRACT: Holds the wordlist data for Pod::Spell::CommonMistakes
 
 # auto-export our 2 subs
 use base qw( Exporter );
@@ -639,10 +637,6 @@ __END__
 
 =for stopwords wordlist Lintian
 
-=head1 NAME
-
-Pod::Spell::CommonMistakes::WordList - Holds the wordlist data for Pod::Spell::CommonMistakes
-
 =head1 SYNOPSIS
 
 	die "Don't use this module directly. Please use Pod::Spell::CommonMistakes instead.";
@@ -662,17 +656,5 @@ Holds the wordlist used in L<Pod::Spell::CommonMistakes>. The data is taken from
 
 L<Pod::Spell::CommonMistakes>
 
-=head1 AUTHOR
-
-Apocalypse E<lt>apocal@cpan.orgE<gt>
-
-Thanks goes out to the Lintian team for their work!
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright 2010 by Apocalypse
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
 
 =cut

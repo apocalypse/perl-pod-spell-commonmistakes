@@ -1,10 +1,8 @@
 # Declare our package
 package Pod::Spell::CommonMistakes;
-use strict; use warnings;
 
-# Initialize our version
-use vars qw( $VERSION );
-$VERSION = '0.01';
+# For Dist::Zilla
+# ABSTRACT: Catches common typos in POD
 
 # Import the modules we need
 use Pod::Spell::CommonMistakes::WordList;
@@ -68,10 +66,6 @@ sub _parse {
 __END__
 
 =for stopwords AnnoCPAN CPAN CPANTS Kwalitee Lintian openldap RT spellchecker wordlist wordlists
-
-=head1 NAME
-
-Pod::Spell::CommonMistakes - Catches common typos in POD
 
 =head1 SYNOPSIS
 
@@ -183,22 +177,5 @@ Please report any bugs or feature requests to C<bug-pod-spell-commonmistakes at 
 the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Pod-Spell-CommonMistakes>.  I will be
 notified, and then you'll automatically be notified of progress on your bug as I make changes.
 
-=head1 AUTHOR
-
-Apocalypse E<lt>apocal@cpan.orgE<gt>
-
-Thanks goes out to the Lintian team for their work!
-
-Props goes out to jawnsy@irc for pointing out a spelling mistake in POE, which prompted me to write this.
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright 2010 by Apocalypse
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
-
-The full text of the license can be found in the LICENSE file included
-with this module.
 
 =cut
