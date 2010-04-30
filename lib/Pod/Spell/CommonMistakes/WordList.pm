@@ -1,7 +1,5 @@
-# Declare our package
 package Pod::Spell::CommonMistakes::WordList;
 
-# For Dist::Zilla
 # ABSTRACT: Holds the wordlist data for Pod::Spell::CommonMistakes
 
 # auto-export our 2 subs
@@ -655,6 +653,5 @@ Holds the wordlist used in L<Pod::Spell::CommonMistakes>. The data is taken from
 =head1 SEE ALSO
 
 L<Pod::Spell::CommonMistakes>
-
 
 =cut

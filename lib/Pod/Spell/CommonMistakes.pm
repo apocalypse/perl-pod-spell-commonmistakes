@@ -1,13 +1,11 @@
-# Declare our package
 package Pod::Spell::CommonMistakes;
 
-# For Dist::Zilla
 # ABSTRACT: Catches common typos in POD
 
 # Import the modules we need
 use Pod::Spell::CommonMistakes::WordList;
-use Pod::Spell;
-use IO::Scalar;
+use Pod::Spell 1.01;
+use IO::Scalar 2.110;
 
 # auto-export our 2 subs
 use base qw( Exporter );
@@ -176,6 +174,5 @@ L<http://github.com/apocalypse/perl-pod-spell-commonmistakes>
 Please report any bugs or feature requests to C<bug-pod-spell-commonmistakes at rt.cpan.org>, or through
 the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Pod-Spell-CommonMistakes>.  I will be
 notified, and then you'll automatically be notified of progress on your bug as I make changes.
-
 
 =cut
