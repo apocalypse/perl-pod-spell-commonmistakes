@@ -62,7 +62,9 @@ sub _parse {
 
 1;
 
-=for stopwords OpenLDAP OpenLdap spellchecker wordlist wordlists
+=pod
+
+=for stopwords OpenLDAP OpenLdap spellchecker wordlist wordlists Lintian
 
 =head1 SYNOPSIS
 
