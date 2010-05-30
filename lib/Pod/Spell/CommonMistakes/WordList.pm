@@ -631,7 +631,6 @@ sub _check_common {
 }
 
 1;
-__END__
 
 =for stopwords wordlist Lintian
 
@@ -649,9 +648,5 @@ Holds the wordlist used in L<Pod::Spell::CommonMistakes>. The data is taken from
 
 	# Data was synced on Wed Apr  7 13:33:46 MST 2010
 	# The git repo was on 0fbfb39a4510a3e80685ce6201810b7b06f1b78e
-
-=head1 SEE ALSO
-
-L<Pod::Spell::CommonMistakes>
 
 =cut
