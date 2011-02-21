@@ -11,6 +11,30 @@ use IO::Scalar 2.110;
 use base qw( Exporter );
 our @EXPORT_OK = qw( check_pod check_pod_case check_pod_all );
 
+=method check_pod ( $filename )
+
+This function is what you will usually run. It will run the spell checks against the POD in $filename. Warning: you would need to catch any
+exceptions thrown from this function!
+
+It returns a hashref of misspelled words and their suggested spelling. If the hash is empty then there is no errors in the POD.
+
+=cut
+
+sub check_pod {
+	my $pod = shift;
+
+	# Start our parse run!
+	my $words = _parse( $pod );
+	return _check_common( $words );
+}
+
+=method check_pod_all ( $filename )
+
+This function behaves the same as check_pod() but it runs all the extra checks too. Currently it's just the picky wordlist but others might
+be added in the future...
+
+=cut
+
 sub check_pod_all {
 	my $pod = shift;
 
@@ -23,13 +47,15 @@ sub check_pod_all {
 	return $err;
 }
 
-sub check_pod {
-	my $pod = shift;
+=method check_pod_case ( $filename )
 
-	# Start our parse run!
-	my $words = _parse( $pod );
-	return _check_common( $words );
-}
+This function behaves the same as check_pod() but it uses a "strict" wordlist instead. The difference is that this wordlist
+will make sure you capitalize common terms properly. One example is: OpenLdap => OpenLDAP.
+
+NOTE: This does NOT run the same checks as check_pod()! If you want to check both the regular and picky wordlists, you would need to use
+the check_pod_all() function.
+
+=cut
 
 sub check_pod_case {
 	my $pod = shift;
@@ -92,33 +118,13 @@ use the system spellchecker. The idea for this came from the L<http://wiki.debia
 To use this, just pass it a filename that has POD in it and you'll get a hashref back. If the hashref is empty that means the checker found
 no misspelled words. If it contains keys, then the keys are the bad words and the values are the suggested spelling.
 
-=method check_pod ( $filename )
-
-This function is what you will usually run. It will run the spell checks against the POD in $filename. Warning: you would need to catch any
-exceptions thrown from this function!
-
-It returns a hashref of misspelled words and their suggested spelling. If the hash is empty then there is no errors in the POD.
-
-=method check_pod_case ( $filename )
-
-This function behaves the same as check_pod() but it uses a "strict" wordlist instead. The difference is that this wordlist
-will make sure you capitalize common terms properly. One example is: OpenLdap => OpenLDAP.
-
-NOTE: This does NOT run the same checks as check_pod()! If you want to check both the regular and picky wordlists, you would need to use
-the check_pod_all() function.
-
-=method check_pod_all ( $filename )
-
-This function behaves the same as check_pod() but it runs all the extra checks too. Currently it's just the picky wordlist but others might
-be added in the future...
-
 =head1 EXPORT
 
 You would need to manually get the function you want.
 
 =head1 SEE ALSO
-
-L<Pod::Spell>
+Pod::Spell
+Test::Pod::Spelling::CommonMistakes
 
 =head1 ACKNOWLEDGEMENTS
 
