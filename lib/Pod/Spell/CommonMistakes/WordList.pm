@@ -766,9 +766,9 @@ sub _check_common {
 		my $lcw = lc( $w );
 		if ( exists $common{ $lcw } ) {
 			# Determine what kind of correction we need
-			if ( $w =~ /^[A-Z]+$/ ) {
+			if ( $w =~ /^[[:upper:]]+$/ ) {
 				$err{ $w } = uc( $common{ $lcw } );
-			} elsif ( $w =~ /^[A-Z]/ ) {
+			} elsif ( $w =~ /^[[:upper:]]/ ) {
 				$err{ $w } = ucfirst( $common{ $lcw } );
 			} else {
 				$err{ $w } = $common{ $lcw };
