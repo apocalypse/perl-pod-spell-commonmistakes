@@ -3,7 +3,7 @@ package Pod::Spell::CommonMistakes::WordList;
 # ABSTRACT: Holds the wordlist data for Pod::Spell::CommonMistakes
 
 # auto-export our 2 subs
-use base qw( Exporter );
+use parent qw( Exporter );
 our @EXPORT = qw( _check_case _check_common );
 
 # TODO Figure out an autoimporter?

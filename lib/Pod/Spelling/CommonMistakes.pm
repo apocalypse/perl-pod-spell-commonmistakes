@@ -2,7 +2,7 @@ package Pod::Spelling::CommonMistakes;
 
 # ABSTRACT: Adaptor for Pod::Spelling to use CommonMistakes as a checker
 
-use base 'Pod::Spelling'; # Thanks :)
+use parent 'Pod::Spelling'; # Thanks :)
 
 use Pod::Spell::CommonMistakes::WordList qw( _check_common _check_case );
 

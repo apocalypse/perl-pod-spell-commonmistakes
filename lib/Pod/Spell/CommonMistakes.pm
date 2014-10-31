@@ -8,7 +8,7 @@ use Pod::Spell 1.01;
 use IO::Scalar 2.110;
 
 # auto-export our 2 subs
-use base qw( Exporter );
+use parent qw( Exporter );
 our @EXPORT_OK = qw( check_pod check_pod_case check_pod_all );
 
 =method check_pod( $filename )
