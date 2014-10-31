@@ -143,7 +143,11 @@ sub _check_case {
 # TODO Figure out an autoimporter?
 # apoc@box:~/lintian/data/spelling$ cat corrections | perl -e 'print "my \%common = (\n"; while ( <STDIN> ) { next if $_ =~ /^#/; if ( $_ =~ /^(.+)\|\|(.+)$/ ) { print " \"$1\" => \"$2\",\n" } }; print ");\n"'
 
-my %common = (
+# TODO ARGH Perl::Critic!@#$
+# Perl::Critic found these violations in "blib/lib/Pod/Spell/CommonMistakes/WordList.pm":
+# [ValuesAndExpressions::ProhibitDuplicateHashKeys] Duplicate hash key "availble" at line 257, near '"availble" => "available",'
+# [ValuesAndExpressions::ProhibitDuplicateHashKeys] Duplicate hash key "avaliable" at line 260, near '"avaliable" => "available",'
+my %common = ( ## no critic (ValuesAndExpressions::ProhibitDuplicateHashKeys)
  "abandonning" => "abandoning",
  "abigious" => "ambiguous",
  "abitrate" => "arbitrate",
