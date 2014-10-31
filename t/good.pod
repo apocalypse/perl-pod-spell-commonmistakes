@@ -6,6 +6,8 @@ This is some pod to check, without errors.
 
 Here is C<code>, I<italic>, B<bold>, F<Ignore.html>, and L<link description|link.html>.
 
+I is the abandonning.
+
 =head1 CODE
 
 	my $foo = 'x12'; # asdf

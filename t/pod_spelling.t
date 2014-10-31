@@ -6,25 +6,22 @@ use Test::More;
 BEGIN {
 	eval { require Pod::Spelling };
 	if ($@){
-		plan skip_all => 'requires Pod::Spelling' ; 
+		plan skip_all => 'requires Pod::Spelling' ;
 	}
-}
-
-BEGIN {
-	use_ok('Pod::Spelling::CommonMistakes');
 }
 
 # First, we test without allow_words
 ok((-e 't/good.pod'), 'Got file');
-my $o = Pod::Spelling::CommonMistakes->new;
+my $o = Pod::Spelling->new( 'import_speller' => 'Pod::Spelling::CommonMistakes' );
 my @r = $o->check_file( 't/good.pod' );
-			
+
 is(  @r, 1, 'Expected errors' );
-is( $r[0], 'Goddard', 'Known unknown word');
+is( $r[0], 'abandonning', 'Known erroneous word');
 
 # Now, we test again setting it!
-$o = Pod::Spelling::CommonMistakes->new(
-	allow_words => 'Goddard'
+$o = Pod::Spelling->new(
+	'import_speller' => 'Pod::Spelling::CommonMistakes',
+	'allow_words' => 'abandonning'
 );
 
 @r = $o->check_file( 't/good.pod' );

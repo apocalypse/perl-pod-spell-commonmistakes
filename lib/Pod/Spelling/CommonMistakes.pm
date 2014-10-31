@@ -21,8 +21,7 @@ sub _init {
 # Accepts one or more lines of text, returns a list mispelt words.
 sub _spell_check_callback {
         my $self = shift;
-        my @lines = @_;
-        @lines = grep { not $_ } split /\s+/, join( ' ', @lines );
+	my @lines = grep { length $_ } split /\s+/, join( ' ', @_ );
 	my $err = _check_common( \@lines );
 	$err = { %$err, %{ _check_case( \@lines ) } };
 
