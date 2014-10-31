@@ -28,3 +28,17 @@ sub _spell_check_callback {
 
         return keys %$err;
 }
+
+1;
+
+=pod
+
+=head1 SYNOPSIS
+
+	die "Don't use this module directly. Please use Pod::Spelling instead.";
+
+=head1 DESCRIPTION
+
+Adaptor for L<Pod::Spelling> as a backend checker.
+
+=cut
