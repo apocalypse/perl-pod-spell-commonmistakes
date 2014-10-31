@@ -2,15 +2,19 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
-	Updated the wordlist
-	Add support for Pod::Spelling as an adaptor, RT#80625 ( thanks RIBASUSHI! )
+1.001 2014-10-31T19:09:06Z UTC
+ - Updated the wordlist
+ - Add support for Pod::Spelling as an adaptor, RT#80625 ( thanks
+   RIBASUSHI! )
 
-1.000	2011-02-21 23:25:42 UTC
+ [STATISTICS]
+ - code churn: 8 files changed, 212 insertions(+), 17 deletions(-)
 
-	Converted to Dist::Zilla for the release process
-	Add some more common misspellings, thanks RT#61505
-	Fix a typo in check_pod_case which prevented it from working
+1.000 2011-02-21T23:25:42Z UTC
+ - Converted to Dist::Zilla for the release process
+ - Add some more common misspellings, thanks RT#61505
+ - Fix a typo in check_pod_case which prevented it from working
 
-0.01	0000-00-00 00:00:00 UTC
+0.01 0000-00-00T00:00:00Z UTC
+ - initial release
 
-	initial release
