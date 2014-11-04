@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+	Split off the Pod::Spelling adaptor ( thanks RT#99987 )
 
 1.001 2014-10-31T19:09:06Z UTC
  - Updated the wordlist
