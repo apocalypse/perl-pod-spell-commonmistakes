@@ -12,7 +12,7 @@ Pod::Spell::CommonMistakes - Catches common typos in POD
 
 =head1 VERSION
 
-  This document describes v1.001 of Pod::Spell::CommonMistakes - released October 31, 2014 as part of Pod-Spell-CommonMistakes.
+  This document describes v1.002 of Pod::Spell::CommonMistakes - released November 04, 2014 as part of Pod-Spell-CommonMistakes.
 
 =head1 SYNOPSIS
 
@@ -225,7 +225,7 @@ from your repository :)
 
 L<https://github.com/apocalypse/perl-pod-spell-commonmistakes>
 
-  git clone git://github.com/apocalypse/perl-pod-spell-commonmistakes.git
+  git clone https://github.com/apocalypse/perl-pod-spell-commonmistakes.git
 
 =head1 AUTHOR
 

@@ -1,7 +1,12 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-	Split off the Pod::Spelling adaptor ( thanks RT#99987 )
+
+1.002 2014-11-04T20:39:52Z UTC
+ - Split off the Pod::Spelling adaptor ( thanks RT#99987 )
+
+ [STATISTICS]
+ - code churn: 5 files changed, 272 insertions(+), 98 deletions(-)
 
 1.001 2014-10-31T19:09:06Z UTC
  - Updated the wordlist
